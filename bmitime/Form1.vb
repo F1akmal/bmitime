@@ -4,21 +4,21 @@
 
 
     Private Sub BtnSubmit_Click(sender As Object, e As EventArgs) Handles BtnSubmit.Click
-        Dim decBerat, decTinggi, decBmi As Decimal
+        Dim dblBerat, dblTinggi, dblBmi As Double
 
-        decBerat = nudBerat.Value
-        decTinggi = nudTinggi.Value
+        dblBerat = nudBerat.Value
+        dblTinggi = nudTinggi.Value
 
-        decBmi = decBerat / (decTinggi ^ 2)
+        dblBmi = dblBerat / (dblTinggi ^ 2)
 
-        If decBmi < 18.5 Then
-            lblArahan.Text = "Bmi = Kurus" & Environment.NewLine & "Bmi = " & decBmi
-        ElseIf decBmi >= 18.5 AndAlso decBmi < 24.9 Then
-            lblArahan.Text = "Bmi = Normal" & Environment.NewLine & "Bmi = " & decBmi
-        ElseIf decBmi >= 25 AndAlso decBmi < 29.9 Then
-            lblArahan.Text = "Bmi = Gemuk" & Environment.NewLine & "Bmi = " & decBmi
+        If dblBmi < 18.5 Then
+            lblArahan.Text = "Bmi = Kurus" & Environment.NewLine & "Bmi = " & dblBmi
+        ElseIf dblBmi >= 18.5 AndAlso dblBmi < 24.9 Then
+            lblArahan.Text = "Bmi = Normal" & Environment.NewLine & "Bmi = " & dblBmi
+        ElseIf dblBmi >= 25 AndAlso dblBmi < 29.9 Then
+            lblArahan.Text = "Bmi = Gemuk" & Environment.NewLine & "Bmi = " & dblBmi
         Else
-            lblArahan.Text = "Bmi = Obesitas" & Environment.NewLine & "Bmi = " & decBmi
+            lblArahan.Text = "Bmi = Obesitas" & Environment.NewLine & "Bmi = " & dblBmi
         End If
 
 
